@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 
+
 <style>
     button{text-align: center;}
     h1{text-align: center;}
@@ -21,7 +22,7 @@
 </style>
 
 <body>
-
+<!-- Parameter følger {color} og {fontSize} definert i funksjon colorChange -->
     <button onclick="colorChange('red', '200%')">Change color to text color to red and font size to 200%</button>
     <button onclick="colorChange('blue', '100%')">Change color to text color to blue and font size to 100%</button>
     <button onclick="addSameLine()">Add more text</button>
@@ -39,6 +40,7 @@
         </div>
     </div>
     <script>
+        // Forkorte
         var getDiv = document.getElementById('container')
         var getlayoutDiv = document.getElementById('layoutcontainer')
 
