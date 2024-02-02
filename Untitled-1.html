@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    button{text-align: center;}
+    h1{text-align: center;}
+    p{text-align: center;}
+
+    .layout1 {
+        display: flex;
+        flex-direction: row-reverse;
+        
+
+    }
+</style>
+
+<body>
+
+    <button onclick="colorChange('red', '200%')">Change color to text color to red and font size to 200%</button>
+    <button onclick="colorChange('blue', '100%')">Change color to text color to blue and font size to 100%</button>
+    <button onclick="addSameLine()">Add more text</button>
+    <button onclick="layout1()">Change Layout</button>
+    <button onclick="removeLayout1()">Remove Layout</button>
+    <div id="layoutcontainer">
+        <div id="container">
+
+            <h1>Dette er min overskrift</h1>
+            <p>Dette er masse tekst under min overskrift<br>
+                Dette er masse tekst under min overskrift<br>
+                Dette er masse tekst under min overskrift<br>
+                Dette er masse tekst under min overskrift<br>
+            </p>
+        </div>
+    </div>
+    <script>
+        var getDiv = document.getElementById('container')
+        var getlayoutDiv = document.getElementById('layoutcontainer')
+
+        function colorChange(color, fontSize) {
+            getDiv.style.color = color;
+            getDiv.style.fontSize = fontSize;
+
+        }
+
+        function addSameLine() {
+            getDiv.innerHTML += /*html*/`
+        <p>Dette er masse tekst under min overskrift<br>
+            Dette er masse tekst under min overskrift<br>
+            Dette er masse tekst under min overskrift<br>
+            Dette er masse tekst under min overskrift<br>
+        </p>
+`
+        }
+
+        function layout1() {
+            getlayoutDiv.classList = [];
+            getlayoutDiv.classList.add('layout1');
+
+        }
+
+        function removeLayout1() {
+        getlayoutDiv.classList = [];
+
+
+        }
+
+    </script>
+</body>
+
+</html>
